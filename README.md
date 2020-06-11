@@ -1,6 +1,6 @@
 # Ultimate Dark Neo
 
-*My second take on the ultimate dark colour theme/scheme for code (main focus: finding pleasant settings for HTML/CSS/JS).
+My second take on the ultimate dark colour theme/scheme for code (main focus: finding pleasant settings for HTML/CSS/JS).
 
 Based on Sublime Text's built-in Mariana scheme and kkga's Spacegray (https://github.com/kkga/spacegray)
 
