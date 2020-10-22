@@ -4,7 +4,7 @@
     "variables":
     {
         "black": "hsl(0, 0%, 0%)",
-        "darkgray": "hsl(210, 7%, 25%)",
+        "darkgray": "hsl(213, 9%, 25%)",
         "gray": "hsl(221, 9%, 53%)",
         "blue": "hsl(210, 50%, 66%)",
         "blue5": "hsl(175, 43%, 56%)",
@@ -164,7 +164,7 @@
         {
             "name": "Tag attribute",
             "scope": "entity.other.attribute-name",
-            "foreground": "var(orange)"
+            "foreground": "var(purple)"
         },
         {
             "name": "HTML attribute",
