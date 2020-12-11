@@ -127,7 +127,7 @@
         },
         {
             "name": "Arrow functions",
-            "scope": "storage.type.function.arrow",
+            "scope": "storage.type.function.arrow, keyword.declaration.function.arrow.js",
             "font_style": "normal"
         },
         {
