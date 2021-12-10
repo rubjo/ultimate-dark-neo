@@ -4,17 +4,17 @@
     "variables":
     {
         "black": "hsl(0, 0%, 0%)",
-        "darkgray": "hsl(213, 9%, 25%)",
-        "gray": "hsl(221, 9%, 53%)",
-        "blue": "hsl(210, 50%, 66%)",
+        "darkgray": "hsl(213, 7%, 23%)",
+        "gray": "hsl(213, 9%, 53%)",
+        "blue": "hsl(213, 50%, 66%)",
         "blue5": "hsl(175, 43%, 56%)",
         "green": "hsl(114, 27%, 68%)",
         "yellow": "hsl(42, 58%, 61%)",
         "purple": "hsl(300, 30%, 68%)",
         "red": "hsl(357, 68%, 65%)",
         "orange": "hsl(16, 81%, 67%)",
-        "white": "hsl(210, 7%, 81%)",
-        "titanium": "hsl(210, 7%, 96%)"
+        "white": "hsl(213, 7%, 81%)",
+        "titanium": "hsl(213, 7%, 96%)"
     },
     "globals":
     {

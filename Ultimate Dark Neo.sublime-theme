@@ -1,22 +1,37 @@
 // DISCLAIMER: a starting point which is a complete rip-off of kkga's Spacegray theme:
 // https://github.com/kkga/spacegray
-// TODO: use variables
 
 {
     "variables":
     {
         "black": "hsl(0, 0%, 0%)",
-        "darkgray": "hsl(210, 7%, 25%)",
-        "gray": "hsl(221, 9%, 53%)",
-        "blue": "hsl(210, 50%, 66%)",
+        "darkgray": "hsl(213, 7%, 23%)",
+        "gray": "hsl(213, 9%, 53%)",
+        "blue": "hsl(213, 50%, 66%)",
         "blue5": "hsl(175, 43%, 56%)",
         "green": "hsl(114, 27%, 68%)",
         "yellow": "hsl(42, 58%, 61%)",
         "purple": "hsl(300, 30%, 68%)",
         "red": "hsl(357, 68%, 65%)",
         "orange": "hsl(16, 81%, 67%)",
-        "white": "hsl(210, 7%, 81%)",
-        "titanium": "hsl(210, 7%, 96%)"
+        "white": "hsl(213, 7%, 81%)",
+        "titanium": "hsl(213, 7%, 96%)",
+        //
+        "darkestgray": "hsl(213, 7%, 19%)",
+        "lightgray": "hsl(213, 5%, 29%)",
+        "brightred": "hsl(12, 100%, 50%)",
+        //
+        "bg-dark": "var(darkestgray)",
+        "bg-primary": "var(darkgray)",
+        "bg-light": "var(lightgray)",
+        "fg-primary": "var(titanium)",
+        "fg-muted": "color(var(fg-primary) alpha(0.6)",
+        "ui-text-primary": "color(var(fg-primary) alpha(0.6)",
+        "ui-text-emphasis": "color(var(fg-primary) alpha(0.8)",
+        "danger-muted": "var(red)",
+        "danger": "var(brightred)",
+        "warning": "var(yellow)",
+        "button-colour": "var(white)"
     },
     "rules":
     [
@@ -28,7 +43,7 @@
             {
                 "class": "tabset_control",
                 "layer0.texture": "",
-                "layer0.tint": [49, 51, 56], // -00
+                "layer0.tint": "var(bg-dark)",
                 "layer0.inner_margin": 0,
                 "layer0.opacity": 1,
                 "content_margin": 0,
@@ -50,7 +65,7 @@
                 "max_margin_trim": 0,
                 "hit_test_level": 0,
                 "layer0.texture": "",
-                "layer0.tint": [49, 51, 56], // -00
+                "layer0.tint": "var(bg-dark)",
                 "layer0.inner_margin": [5,5],
                 "layer0.opacity": 1
             },
@@ -70,7 +85,7 @@
                 "class": "tab_control",
                 "attributes": ["selected"],
                 "layer0.texture": "",
-                "layer0.tint": [61, 64, 67] // 00
+                "layer0.tint": "var(bg-primary)"
             },
 
         //
@@ -82,7 +97,7 @@
                 "class": "tab_close_button",
                 "layer0.texture": "Ultimate Dark Neo/assets/close.png",
                 "layer0.opacity": 0,
-                "layer0.tint": [125, 129, 135] // 03
+                "layer0.tint": "var(fg-muted)"
             },
             {
                 "class": "tab_close_button",
@@ -100,7 +115,7 @@
                 "parents": [{"class": "tab_control"}],
                 "attributes": ["hover"],
                 "layer0.opacity": 1,
-                "layer0.tint": [191, 97, 106] // 08
+                "layer0.tint": "var(danger-muted)" // 08
             },
             {
                 "class": "tab_close_button",
@@ -112,7 +127,7 @@
                 "class": "tab_close_button",
                 "parents": [{"class": "tab_control","attributes": ["dirty"]}],
                 "layer0.texture": "Ultimate Dark Neo/assets/circle.png",
-                "layer0.tint": [255, 203, 100], // 0A
+                "layer0.tint": "var(warning)",
                 "layer0.opacity": 1
             },
             {
@@ -128,7 +143,7 @@
                 "layer0.texture": "Ultimate Dark Neo/assets/close.png",
                 "attributes": ["hover"],
                 "layer0.opacity": 1,
-                "layer0.tint": [255, 50, 0] // 08
+                "layer0.tint": "var(danger)" // 08
             }, 
             { 
                 "class": "tab_close_button",
@@ -166,17 +181,12 @@
             {
                 "class": "tab_label",
                 "fade": true,
-                "fg": [125, 129, 135] // 03
-            },
-            {
-                "class": "tab_label",
-                "parents": [{"class": "tab_control","attributes": ["hover"]}],
-                "fg": [190, 190, 200] // 05
+                "fg": "var(fg-muted)"
             },
             {
                 "class": "tab_label",
                 "parents": [{"class": "tab_control","attributes": ["selected"]}],
-                "fg": [255, 255, 255] // 06
+                "fg": "var(fg-primary)"
             },
             {
                 "class": "tab_label",
@@ -213,7 +223,7 @@
             {
                 "class": "fold_button_control",
                 "layer0.texture": "Ultimate Dark Neo/assets/fold-right.png",
-                "layer0.tint": [255, 255, 255], // 04
+                "layer0.tint": "var(fg-primary)",
                 "layer0.inner_margin": 0,
                 "content_margin": [8,8]
             },
@@ -241,7 +251,7 @@
             {
                 "class": "scroll_bar_control",
                 "layer0.texture": "",
-                "layer0.tint": [49, 51, 56], // -01
+                "layer0.tint": "var(bg-dark)",
                 "layer0.opacity": 1,
                 "layer0.inner_margin": [0,0],
                 "blur": true
@@ -251,7 +261,7 @@
                 "class": "scroll_bar_control",
                 "attributes": ["horizontal"],
                 "layer0.texture": "",
-                "layer0.tint": [49, 51, 56], // -01
+                "layer0.tint": "var(bg-dark)",
                 "layer0.inner_margin": [0,0],
                 "blur": true
             },
@@ -259,7 +269,7 @@
             {
                 "class": "scroll_corner_control",
                 "layer0.texture": "",
-                "layer0.tint": [49, 51, 56], // -01
+                "layer0.tint": "var(bg-dark)",
                 "layer0.inner_margin": [0,0],
                 "layer0.opacity": 1
             },
@@ -267,7 +277,7 @@
             {
                 "class": "puck_control",
                 "layer0.texture": "",
-                "layer0.tint": [52, 61, 70], // 01
+                "layer0.tint": "var(bg-light)",
                 "layer0.opacity": 1,
                 "layer0.inner_margin": [0,0],
                 "content_margin": [6,0],
@@ -278,7 +288,7 @@
                 "class": "puck_control",
                 "attributes": ["horizontal"],
                 // "layer0.texture": "",
-                "layer0.tint": [52, 61, 70], // 01
+                "layer0.tint": "var(bg-light)",
                 "layer0.inner_margin": [0,0],
                 "content_margin": [12,6],
                 "blur": false
@@ -304,7 +314,7 @@
                 "class": "scroll_bar_control",
                 "settings": ["overlay_scroll_bars"],
                 // "layer0.texture": "",
-                "layer0.tint": [61, 64, 67], // 00
+                "layer0.tint": "var(bg-primary)",
                 "layer0.inner_margin": [0,5],
                 "layer0.opacity": 0,
                 "blur": false
@@ -343,7 +353,7 @@
                 "settings": ["overlay_scroll_bars"],
                 "attributes": ["dark"],
                 // "layer0.texture": "",
-                "layer0.tint": [125, 129, 135] // 02
+                "layer0.tint": "var(fg-muted)"
 
             },
             // Overlay light horizontal puck (for dark content)
@@ -352,7 +362,7 @@
                 "settings": ["overlay_scroll_bars"],
                 "attributes": ["horizontal","dark"],
                 // "layer0.texture": "",
-                "layer0.tint": [125, 129, 135] // 02
+                "layer0.tint": "var(fg-muted)"
             },
 
         //
@@ -361,7 +371,7 @@
 
             {
                 "class": "sheet_container_control",
-                "layer0.tint": [61, 64, 67],
+                "layer0.tint": "var(bg-primary)",
                 "layer0.opacity": 1
             },
 
@@ -372,7 +382,7 @@
             {
                 "class": "grid_layout_control",
                 "border_size": 1,
-                "border_color": [49, 51, 56] // -00
+                "border_color": "var(bg-dark)"
             },
 
         //
@@ -381,7 +391,7 @@
 
             {
                 "class": "minimap_control",
-                "viewport_color": [255,255,255,15]
+                "viewport_color": "color(var(fg-primary) alpha(0.06))"
             },
 
         //
@@ -391,7 +401,7 @@
             // General labels
             {
                 "class": "label_control",
-                "color": [125, 129, 135] // 03
+                "color": "var(fg-muted)"
             },
             // Text field labels
             {
@@ -403,7 +413,7 @@
                 "class": "label_control",
                 "parents": [{"class": "button_control"}],
                 "font.bold": true,
-                "color": [150, 181, 180] // 0C
+                "color": "var(button-colour)" // 0C
             },
 
         //
@@ -414,7 +424,7 @@
             {
                 "class": "tool_tip_control",
                 // "layer0.texture": "",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.inner_margin": [1,1],
                 "layer0.opacity": 1,
                 "content_margin": [4,4]
@@ -422,7 +432,7 @@
             // Tooltip content
             {
                 "class": "tool_tip_label_control",
-                "color": [239,241,245] // 07
+                "color": "var(fg-primary)"
             },
 
         //
@@ -433,7 +443,7 @@
             {
                 "class": "status_bar",
                 "layer0.texture": "",
-                "layer0.tint": [49, 51, 56], // -00
+                "layer0.tint": "var(bg-dark)",
                 "layer0.opacity": 1,
                 "content_margin": 4
             },
@@ -446,7 +456,7 @@
             {
                 "class": "label_control",
                 "parents": [{"class": "status_bar"}],
-                "color": [125, 129, 135] // 02
+                "color": "var(fg-muted)"
             },
 
         //
@@ -458,7 +468,7 @@
                 "class": "sidebar_container",
                 // "layer0.texture": "",
                 "layer0.opacity": 1,
-                "layer0.tint": [49, 51, 56], // -01
+                "layer0.tint": "var(bg-dark)",
                 "layer0.inner_margin": [1,5,2,1],
                 "content_margin": [0,4,0,0]
             },
@@ -475,7 +485,7 @@
             {
                 "class": "tree_row",
                 // "layer0.texture": "",
-                "layer0.tint": [49, 51, 56], // 01
+                "layer0.tint": "var(bg-dark)",
                 "layer0.opacity": 0,
                 "layer0.inner_margin": [1,1]
             },
@@ -488,7 +498,7 @@
             // Sidebar heading
             {
                 "class": "sidebar_heading",
-                "color": [125, 129, 135], // 02
+                "color": "var(fg-muted)",
                 "font.bold": true
             },
             {
@@ -525,7 +535,7 @@
             // Sidebar entry
             {
                 "class": "sidebar_label",
-                "color": [125, 129, 135] // 03
+                "color": "var(fg-muted)"
             },
             {
                 "class": "sidebar_label",
@@ -551,12 +561,12 @@
             {
                 "class": "sidebar_label",
                 "parents": [{"class": "tree_row","attributes": ["expandable"]}],
-                "color": [125, 129, 135] // 03
+                "color": "var(fg-muted)"
             },
             {
                 "class": "sidebar_label",
                 "parents": [{"class": "tree_row","attributes": ["hover"]}],
-                "color": [190, 190, 200] // 05
+                "color": "var(ui-text-emphasis)"
             },
             {
                 "class": "sidebar_label",
@@ -568,7 +578,7 @@
             {
                 "class": "sidebar_label",
                 "parents": [{"class": "tree_row","attributes": ["selected"]}],
-                "color": [255, 255, 255] // 06
+                "color": "var(fg-primary)"
             },
 
         //
@@ -580,14 +590,14 @@
                 "class": "disclosure_button_control",
                 "content_margin": [8,8],
                 "layer0.texture": "Ultimate Dark Neo/assets/fold-right.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "layer0.inner_margin": 0
             },
             {
                 "class": "disclosure_button_control",
                 "parents": [{"class": "tree_row","attributes": ["hover"]}],
-                "layer0.tint": [175, 177, 185] // 04
+                "layer0.tint": "var(ui-text-primary)"
             },
             {
                 "class": "disclosure_button_control",
@@ -616,7 +626,7 @@
                 "class": "icon_folder",
                 "layer0.texture": "Ultimate Dark Neo/assets/folder-closed.png",
                 "layer0.opacity": 0.5,
-                "layer0.tint": [175, 177, 185],  // 04
+                "layer0.tint": "var(ui-text-primary)", 
                 "content_margin": [8, 8]
             },
             {
@@ -657,7 +667,7 @@
                         "Ultimate Dark Neo/assets/spinner4.png",
                         "Ultimate Dark Neo/assets/spinner5.png",
                         "Ultimate Dark Neo/assets/spinner6.png",
-"Ultimate Dark Neo/assets/spinner7.png"
+                        "Ultimate Dark Neo/assets/spinner7.png"
                     ],
                     "loop": true,
                     "frame_time": 0.075
@@ -670,7 +680,7 @@
               "class": "icon_folder_dup",
               "layer0.texture": "Ultimate Dark Neo/assets/folder-dup.png",
               "layer0.opacity": 0.5,
-              "layer0.tint": [175, 177, 185],  // 04
+              "layer0.tint": "var(ui-text-primary)", 
               "content_margin": [8, 8]
             },
             {
@@ -739,7 +749,7 @@
                 "min_size": [64,0],
                 // "layer0.texture": "",
                 "layer0.opacity": 1,
-                "layer0.tint": [49, 51, 56], // -00
+                "layer0.tint": "var(bg-dark)",
                 "layer0.inner_margin": [8,8]
             },
             // Hover button state
@@ -747,14 +757,14 @@
                 "class": "button_control",
                 "attributes": ["hover"],
                 // "layer0.texture": "",
-                "layer0.tint": [49, 51, 56] // -01
+                "layer0.tint": "var(bg-dark)"
             },
             // Pressed button state
             {
                 "class": "button_control",
                 "attributes": ["pressed"],
                 // "layer0.texture": "",
-                "layer0.tint": [49, 51, 56] // -00
+                "layer0.tint": "var(bg-dark)"
             },
         //
         // TEXT INPUT FIELD
@@ -764,7 +774,7 @@
             {
                 "class": "text_line_control",
                 // "layer0.texture": "",
-                "layer0.tint": [49, 51, 56], // -01
+                "layer0.tint": "var(bg-dark)",
                 "layer0.opacity": 1,
                 "content_margin": 6
             },
@@ -779,7 +789,7 @@
                 // "layer0.texture": "",
                 "layer0.inner_margin": [0,0],
                 "layer0.opacity": 1,
-                "layer0.tint": [49, 51, 56], // -00
+                "layer0.tint": "var(bg-dark)",
                 "content_margin": 0
             },
             // Quick panel background
@@ -787,7 +797,7 @@
                 "class": "overlay_control",
                 "layer0.opacity": 1,
                 // "layer1.texture": "",
-                "layer1.tint": [49, 51, 56], // 01
+                "layer1.tint": "var(bg-dark)",
                 "layer1.inner_margin": [0,0,0,0],
                 "layer1.opacity": 1,
                 "content_margin": 0
@@ -800,41 +810,39 @@
             {
                 "class": "quick_panel",
                 "row_padding": 8,
-                "layer0.tint": [49, 51, 56],
+                "layer0.tint": "var(bg-dark)",
                 "layer0.opacity": 1,
                 "dark_content": true
             },
             {
                 "class": "quick_panel_row",
-                // "layer0.texture": "",
-                "layer0.tint": [49, 51, 56], // 01
+                "layer0.tint": "var(bg-dark)",
                 "layer0.inner_margin": 8,
                 "layer0.opacity": 1
             },
             {
                 "class": "quick_panel_row",
                 "attributes": ["selected"],
-                // "layer0.texture": "",
-                "layer0.tint": [70, 80, 85] // -01
+                "layer0.tint": "var(bg-light)"
             },
             {
                 "class": "quick_panel_label",
-                "fg": [175, 177, 185, 255], // 04
-                "match_fg": [190, 200, 210, 255], // 05
-                "selected_fg": [190, 200, 210, 255], // 05
-                "selected_match_fg": [239, 241, 245, 255] // 07
+                "fg": "var(ui-text-primary)",
+                "match_fg": "var(ui-text-emphasis)",
+                "selected_fg": "var(ui-text-emphasis)",
+                "selected_match_fg": "var(fg-primary)"
             },
             {
                 "class": "quick_panel_path_label",
-                "fg": [125, 129, 135, 255], // 03
-                "match_fg": [175, 177, 185, 255], // 04
-                "selected_fg": [125, 129, 135, 255], // 03
-                "selected_match_fg": [175, 177, 185, 255] // 04
+                "fg": "var(fg-muted)",
+                "match_fg": "var(ui-text-primary)",
+                "selected_fg": "var(fg-muted)",
+                "selected_match_fg": "var(ui-text-primary)"
             },
             {
                 "class": "quick_panel_score_label",
-                "fg": [125, 129, 135, 255], // 03
-                "selected_fg": [125, 129, 135, 255] // 03
+                "fg": "var(fg-muted)",
+                "selected_fg": "var(fg-muted)"
             },
 
         //
@@ -844,14 +852,14 @@
             {
                 "class": "mini_quick_panel_row",
                 // "layer0.texture": "",
-                "layer0.tint": [49, 51, 56], // 01
+                "layer0.tint": "var(bg-dark)",
                 "layer0.opacity": 1
             },
             {
                 "class": "mini_quick_panel_row",
                 "attributes": ["selected"],
                 // "layer0.texture": "",
-                "layer0.tint": [70, 80, 85] // -01
+                "layer0.tint": "var(bg-light)"
             },
 
         //
@@ -861,7 +869,7 @@
             {
                 "class": "popup_control",
                 "content_margin": [0,0],
-                "layer0.tint": [49, 51, 56], // 01
+                "layer0.tint": "var(bg-dark)",
                 "layer0.opacity": 1
             },
             {
@@ -870,15 +878,15 @@
             },
             {
                 "class": "auto_complete_label",
-                "fg": [125, 129, 135, 255], // 03
-                "match_fg": [190, 200, 210, 255], // 05
-                "selected_fg": [175, 177, 185, 255], // 03
-                "selected_match_fg": [190, 200, 210, 255] // 05
+                "fg": "var(ui-text-primary)",
+                "match_fg": "var(ui-text-emphasis)",
+                "selected_fg": "var(ui-text-emphasis)",
+                "selected_match_fg": "var(fg-primary)"
             },
             {
                 "class": "table_row",
                 // "layer0.texture": "",
-                "layer0.tint": [90, 90, 90], // 02
+                "layer0.tint": "var(bg-light)",
                 "layer0.opacity": 0,
                 "layer0.inner_margin": [3,1]
             },
@@ -952,7 +960,7 @@
             {
                 "class": "icon_regex",
                 "layer0.texture": "Ultimate Dark Neo/assets/regex.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "content_margin": 8
 
@@ -960,33 +968,33 @@
             {
                 "class": "icon_regex",
                 "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
-                "layer0.tint": [239, 241, 245] // 07
+                "layer0.tint": "var(fg-primary)"
             },
             // Case sensitive search button
             {
                 "class": "icon_case",
                 "layer0.texture": "Ultimate Dark Neo/assets/casesens.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "content_margin": 8
             },
             {
                 "class": "icon_case",
                 "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
-                "layer0.tint": [239, 241, 245] // 07
+                "layer0.tint": "var(fg-primary)"
             },
             // Match whole word search button
             {
                 "class": "icon_whole_word",
                 "layer0.texture": "Ultimate Dark Neo/assets/wholeword.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "content_margin": 8
             },
             {
                 "class": "icon_whole_word",
                 "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
-                "layer0.tint": [239, 241, 245] // 07
+                "layer0.tint": "var(fg-primary)"
             },
 
         //
@@ -997,27 +1005,27 @@
             {
                 "class": "icon_context",
                 "layer0.texture": "Ultimate Dark Neo/assets/context.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "content_margin": 8
             },
             {
                 "class": "icon_context",
                 "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
-                "layer0.tint": [239, 241, 245] // 07
+                "layer0.tint": "var(fg-primary)"
             },
             // Use search buffer
             {
                 "class": "icon_use_buffer",
                 "layer0.texture": "Ultimate Dark Neo/assets/buffer.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "content_margin": 8
             },
             {
                 "class": "icon_use_buffer",
                 "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
-                "layer0.tint": [239, 241, 245] // 07
+                "layer0.tint": "var(fg-primary)"
             },
 
         //
@@ -1027,40 +1035,40 @@
             {
                 "class": "icon_reverse",
                 "layer0.texture": "Ultimate Dark Neo/assets/reverse.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "content_margin": 8
             },
             {
                 "class": "icon_reverse",
                 "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
-                "layer0.tint": [239, 241, 245] // 07
+                "layer0.tint": "var(fg-primary)"
             },
             // Search wrap button
             {
                 "class": "icon_wrap",
                 "layer0.texture": "Ultimate Dark Neo/assets/wrap.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "content_margin": 8
             },
             {
                 "class": "icon_wrap",
                 "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
-                "layer0.tint": [239, 241, 245] // 07
+                "layer0.tint": "var(fg-primary)"
             },
             // Search in selection button
             {
                 "class": "icon_in_selection",
                 "layer0.texture": "Ultimate Dark Neo/assets/selection.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "content_margin": 8
             },
             {
                 "class": "icon_in_selection",
                 "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
-                "layer0.tint": [239, 241, 245] // 07
+                "layer0.tint": "var(fg-primary)"
             },
 
         //
@@ -1071,14 +1079,14 @@
             {
                 "class": "icon_preserve_case",
                 "layer0.texture": "Ultimate Dark Neo/assets/lock.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "content_margin": 8
             },
             {
                 "class": "icon_preserve_case",
                 "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
-                "layer0.tint": [239, 241, 245] // 07
+                "layer0.tint": "var(fg-primary)"
             },
 
         //
@@ -1089,14 +1097,14 @@
             {
                 "class": "icon_highlight",
                 "layer0.texture": "Ultimate Dark Neo/assets/highlight.png",
-                "layer0.tint": [125, 129, 135], // 02
+                "layer0.tint": "var(fg-muted)",
                 "layer0.opacity": 1,
                 "content_margin": 8
             },
             {
                 "class": "icon_highlight",
                 "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
-                "layer0.tint": [239, 241, 245] // 07
+                "layer0.tint": "var(fg-primary)"
             },
 
         //
@@ -1106,7 +1114,7 @@
                 "class": "disclosure_button_control",
                 "settings": ["ultimate_dark_neo_color_expanded_folder"],
                 "attributes": ["expanded"],
-                "layer0.tint": [254, 204, 102] // 0A
+                "layer0.tint": "var(warning)"
             },
 
         //
@@ -1147,8 +1155,8 @@
             {
                 "class": "title_bar",
                 "settings": ["!disable_custom_title_bar"],
-                "fg": [175, 177, 185], // 04
-                "bg": [49, 51, 56] // -00
+                "fg": "var(ui-text-primary)",
+                "bg": "var(bg-dark)"
             }
     ]
 }
