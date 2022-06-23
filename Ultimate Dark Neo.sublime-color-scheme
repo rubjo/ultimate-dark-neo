@@ -4,7 +4,7 @@
     "variables":
     {
         "black": "hsl(0, 0%, 0%)",
-        "darkgray": "hsl(213, 9%, 25%)",
+        "darkgray": "hsl(213, 7%, 23%)",
         "gray": "hsl(221, 9%, 53%)",
         "blue": "hsl(210, 50%, 66%)",
         "blue5": "hsl(175, 43%, 56%)",
