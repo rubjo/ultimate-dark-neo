@@ -143,8 +143,8 @@
         {
             "name": "Inherited class",
             "scope": "entity.other.inherited-class",
-            "foreground": "var(blue5)",
-            "font_style": "italic underline"
+            "foreground": "var(yellow)",
+            "font_style": "bold"
         },
         {
             "name": "Function argument",
