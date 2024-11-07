@@ -12,13 +12,13 @@
         "green": "hsl(114, 32%, 70%)",
         "yellow": "hsl(36, 73%, 72%)",
         "purple": "hsl(300, 27%, 68%)",
-        "red": "hsl(357, 48%, 72%)",
+        "red": "hsl(357, 55%, 72%)",
         "orange": "hsl(16, 81%, 70%)",
         "white": "hsl(206, 7%, 81%)",
         "titanium": "hsl(206, 7%, 96%)",
         //
-        "darkestgray": "hsl(206, 7%, 19%)",
-        "lightgray": "hsl(206, 5%, 29%)",
+        "darkestgray": "hsl(213, 7%, 19%)",
+        "lightgray": "hsl(213, 5%, 29%)",
         "brightred": "hsl(12, 100%, 50%)",
         //
         "bg-dark": "var(darkestgray)",

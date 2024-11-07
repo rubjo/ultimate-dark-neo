@@ -11,7 +11,7 @@
         "green": "hsl(114, 32%, 70%)",
         "yellow": "hsl(36, 73%, 72%)",
         "purple": "hsl(300, 27%, 68%)",
-        "red": "hsl(357, 48%, 72%)",
+        "red": "hsl(357, 55%, 72%)",
         "orange": "hsl(16, 81%, 70%)",
         "white": "hsl(206, 7%, 81%)",
         "titanium": "hsl(206, 7%, 96%)",
@@ -267,12 +267,12 @@
         {
             "name": "markup code",
             "scope": "markup.raw",
-            "background": "color(var(blue) alpha(0.88))"
+            "background": "var(darkestgray)"
         },
         {
             "name": "markup code",
             "scope": "markup.raw.inline",
-            "background": "color(var(blue) alpha(0.5))"
+            "background": "var(darkestgray)"
         },
         {
             "name": "markup punctuation",
