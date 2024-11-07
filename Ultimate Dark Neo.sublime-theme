@@ -5,14 +5,14 @@
     "variables":
     {
         "black": "hsl(0, 0%, 0%)",
-        "darkgray": "hsl(218, 7%, 23%)",
+        "darkgray": "hsl(218, 7%, 22%)",
         "gray": "hsl(221, 9%, 53%)",
         "blue": "hsl(210, 50%, 66%)",
         "blue5": "hsl(180, 36%, 63%)",
         "green": "hsl(114, 32%, 70%)",
         "yellow": "hsl(36, 73%, 72%)",
         "purple": "hsl(300, 27%, 68%)",
-        "red": "hsl(357, 66%, 68%)",
+        "red": "hsl(357, 48%, 72%)",
         "orange": "hsl(16, 81%, 70%)",
         "white": "hsl(206, 7%, 81%)",
         "titanium": "hsl(206, 7%, 96%)",
